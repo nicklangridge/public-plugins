@@ -33,9 +33,12 @@ sub update_conf {
   # get the server name from the environment (this should match the domain name, e.g. www.ensembl.org)
   $SiteDefs::ENSEMBL_SERVERNAME = $ENV{ENSEMBL_SERVERNAME} if $ENV{ENSEMBL_SERVERNAME};
 
+
+   $SiteDefs::ENSEMBL_PRIMARY_SPECIES   = 'Saccharomyces_cerevisiae'; # Default species
+
   # limit the demo to human and mouse
   $SiteDefs::PRODUCTION_NAMES = [qw(
-    homo_sapiens
+    saccharomyces_cerevisiae
     mus_musculus
   )];
 }
